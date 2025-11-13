@@ -1,0 +1,596 @@
+.header{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.body {
+  background: radial-gradient(circle at top left, #1e1e2f, #0a0a12);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+ 
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 50px;
+  background: linear-gradient(145deg, #141422, #1e1e2f);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  transform: perspective(1000px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+ 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateZ(10px);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.logo:hover {
+  transform: scale(1.05) translateZ(10px);
+  filter: brightness(1.2);
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.6);
+  animation: glow 2s ease-in-out infinite alternate;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.logo:hover img {
+  transform: scale(1.04);
+  box-shadow: 0 0 25px rgba(79, 195, 247, 0.9);
+  cursor: pointer;
+}
+.logo h1 {
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, #4fc3f7, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+.logo:hover h1 {
+  transform: scale(1.04);
+  text-shadow: 0 0 15px rgba(79, 195, 247, 0.7);
+  cursor: pointer;
+}
+ 
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-buttons button {
+  background: linear-gradient(145deg, #1a1a2e, #232342);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-buttons button:hover {
+  background: linear-gradient(145deg, #4fc3f7, #00bcd4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.4);
+}
+.nav-buttons button i {
+  transition: transform 0.3s ease;
+}
+.nav-buttons button:hover i {
+  transform: rotateY(360deg);
+}
+.scroll-loop {
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 0;
+  background: linear-gradient(145deg, #0a0a12, #1e1e2f);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.cards-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 35s linear infinite;
+}
+
+.card {
+  flex: 0 0 420px;
+  height: 250px;
+  background: linear-gradient(145deg, #1a1a2e, #232342);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  cursor: pointer;
+  border: 5px white;
+}
+
+.card i {
+  font-size: 50px;
+  color: #00e5ff;
+  margin-bottom: 15px;
+  transition: transform 0.6s ease, text-shadow 0.6s ease;
+}
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #4fc3f7, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card p {
+  font-size: 1rem;
+  color: #b0bec5;
+  padding: 0 20px;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: rotateY(8deg) translateY(-10px) scale(1.07);
+  box-shadow: 0 15px 45px rgba(0, 188, 212, 0.5);
+  z-index: 5;
+}
+.card:hover i {
+  transform: scale(1.3) rotateY(360deg);
+  text-shadow: 0 0 30px rgba(79, 195, 247, 0.9);
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.3);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(79, 195, 247, 0.8);
+  }
+}
+ 
+.hero-card {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(145deg, #0f1624, #1b2439);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  background: linear-gradient(145deg, #1a1a2e, #232342);
+  padding: 50px 70px;
+  max-width: 900px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 25px 60px rgba(0, 188, 212, 0.2);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+.hero-content:hover {
+  transform: rotateX(0deg) scale(1.03);
+  box-shadow: 0 35px 80px rgba(0, 188, 212, 0.5);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #4fc3f7, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero-content span {
+  color: #00e5ff;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #b0bec5;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background: linear-gradient(145deg, #00e5ff, #4fc3f7);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0f1624;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.3);
+  transition: all 0.3s ease;
+}
+.hero-btn i {
+  margin-right: 8px;
+}
+.hero-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.6);
+  background: linear-gradient(145deg, #4fc3f7, #00bcd4);
+}
+
+    /* HELP/SERVICES OVERLAY BASE */
+.help-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 25, 0.85);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.help-card {
+  background: linear-gradient(145deg, #101020, #1c1c2b);
+  color: white;
+  width: 75%;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4), inset 0 0 15px rgba(0, 255, 255, 0.3);
+  transform: perspective(1000px) rotateY(0deg) translateZ(10px);
+  animation: pop3D 0.7s ease;
+  position: relative;
+}
+
+.help-card h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  background: linear-gradient(90deg, #00e5ff, #4fc3f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.help-card .qa {
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.help-card .qa:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.help-card h2 {
+  color: #4fc3f7;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.help-card p {
+  color: #d1d1d1;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.close-help {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  color: #00e5ff;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.close-help:hover {
+  transform: scale(1.2);
+  color: #4fc3f7;
+}
+
+/* SERVICES VEHICLE CARD STYLES */
+.vehicle-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.vehicle-card img {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.vehicle-card img:hover {
+    transform: scale(1.05);
+}
+
+.vehicle-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.action-btn {
+    background: linear-gradient(145deg, #00e5ff, #4fc3f7);
+    border: none;
+    color: #0f1624;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 229, 255, 0.4);
+}
+
+.details-btn {
+    background: linear-gradient(145deg, #4fc3f7, #1a1a2e);
+    color: white; 
+    border: 1px solid #4fc3f7;
+}
+
+.details-btn:hover {
+     background: linear-gradient(145deg, #00e5ff, #1c1c2b);
+}
+
+/* FEEDBACK OVERLAY */
+.feedback-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 30, 0.85);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* FEEDBACK CARD */
+.feedback-card {
+  background: linear-gradient(145deg, #121226, #1a1a33);
+  color: white;
+  width: 40%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4),
+              inset 0 0 15px rgba(0, 255, 255, 0.2);
+  transform: perspective(1000px) rotateY(0deg) translateZ(10px);
+  animation: slideUp3D 0.6s ease;
+  text-align: center;
+  position: relative;
+}
+
+.feedback-card h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00e5ff, #4fc3f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feedback-card p {
+  font-size: 1rem;
+  color: #bfbfbf;
+  margin-bottom: 25px;
+}
+
+.feedback-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.feedback-card label {
+  text-align: left;
+  color: #4fc3f7;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.feedback-card input,
+.feedback-card textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.feedback-card input:focus,
+.feedback-card textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transform: scale(1.02);
+}
+
+.rating-label {
+  color: #4fc3f7;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.stars i:hover,
+.stars i.active {
+  color: #00e5ff;
+  transform: scale(1.2);
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.submit-feedback {
+  background: linear-gradient(90deg, #00e5ff, #4fc3f7);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-feedback:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.close-feedback {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  color: #00e5ff;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.close-feedback:hover {
+  transform: scale(1.2);
+  color: #4fc3f7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pop3D {
+  0% { transform: perspective(1000px) rotateY(-20deg) scale(0.8); opacity: 0; }
+  100% { transform: perspective(1000px) rotateY(0deg) scale(1); opacity: 1; }
+}
+
+@keyframes slideUp3D {
+  0% { transform: translateY(50px) scale(0.9); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* === Scroll Loop Section === */
+.cards-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 35s linear infinite; 
+}
+
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/*
+ * New styles for the Vehicle Card Layout to place image on left and text on right
+ */
+
+.vehicle-card {
+    /* Ensure the card is wide enough to support two columns comfortably */
+    max-width: 900px; 
+}
+
+.vehicle-layout {
+    display: flex;
+    gap: 20px; /* Space between the image and the details */
+    align-items: flex-start; /* Aligns items to the top */
+    margin-top: 10px;
+}
+
+.vehicle-image-container {
+    /* Image container takes roughly 40% of the space */
+    flex: 0 0 40%;
+    max-width: 40%;
+    /* Styling for the placeholder text for visual clarity */
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.vehicle-details-container {
+    /* Details container takes the remaining 60% of the space */
+    flex: 1 1 60%;
+    display: flex; /* Makes the content inside flexible (e.g., stacking paragraphs) */
+    flex-direction: column;
+}
+
+/* Ensure the vehicle title is not affected by the flex layout */
+.vehicle-card h2 {
+    margin-bottom: 10px; 
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .vehicle-layout {
+        /* Stack the image and text vertically on smaller screens */
+        flex-direction: column;
+    }
+
+    .vehicle-image-container {
+        /* Image takes full width on mobile */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

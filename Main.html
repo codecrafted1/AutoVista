@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoVista</title>
+  <link rel="stylesheet" href="Main.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">
+       alt="AutoVista Logo" />
+      <h1>AutoVista</h1>
+    </div>
+
+    <nav class="nav-buttons">
+      <button id="dashboard-btn"><i class="fa-solid fa-house"></i> HOME</button>
+      <button id="doc-btn"><i class="fa-solid fa-book"></i> SERVICES</button>
+      <button id="help-btn"><i class="fa-solid fa-circle-question"></i> HELP</button>
+      <button id="feedback-btn"><i class="fa-solid fa-comment"></i> FEEDBACK</button>
+    </nav>
+  </header>
+
+  <section class="hero-card">
+    <div class="hero-content">
+      <h1>Welcome to <span>One Stop Automotive Hub</span></h1>
+    </div>
+  </section>
+
+<section class="scroll-loop">
+  <div class="cards-track">
+    <div class="card"><i class="fa-solid fa-bullhorn"></i><h2>Announcements</h2><p>Stay updated with the latest car, bike, and e-vehicle models.</p></div>
+    <div class="card"><i class="fa-solid fa-screwdriver-wrench"></i><h2>Complaints</h2><p>Report maintenance issues directly to Autovista.</p></div>
+    <div class="card"><i class="fa-solid fa-comments"></i><h2>Feedback</h2><p>Share your thoughts on quality, models, or facilities.</p></div>
+    <div class="card"><i class="fa-solid fa-user"></i><h2>Profile</h2><p>View or update your vehicle details and preferences.</p></div>
+
+    <div class="card"><i class="fa-solid fa-bullhorn"></i><h2>Announcements</h2><p>Stay updated with the latest car, bike, and e-vehicle models.</p></div>
+    <div class="card"><i class="fa-solid fa-screwdriver-wrench"></i><h2>Complaints</h2><p>Report maintenance issues directly to Autovista.</p></div>
+    <div class="card"><i class="fa-solid fa-comments"></i><h2>Feedback</h2><p>Share your thoughts on quality, models, or facilities.</p></div>
+    <div class="card"><i class="fa-solid fa-user"></i><h2>Profile</h2><p>View or update your vehicle details and preferences.</p></div>
+  </div>
+</section>
+
+  <div class="help-overlay" id="helpOverlay">
+    <div class="help-card">
+      <button class="close-help" id="closeHelp"><i class="fa-solid fa-xmark"></i></button>
+      <h1><i class="fa-solid fa-circle-question"></i> Help Center</h1>
+
+      <div class="qa">
+        <h2>Q1: How can I find a car that fits my budget?</h2>
+        <p>A: Use the search filters available on the website. You can filter vehicles by price range, brand, fuel type, or model year to easily find options within your budget.</p>
+      </div>
+
+      <div class="qa">
+        <h2>Q2: How does the website ensure the cars listed are genuine?</h2>
+        <p>A: All vehicle listings are verified by our team before they go live. We check registration details, documents, and seller authenticity to ensure a safe and trustworthy experience.</p>
+      </div>
+
+      <div class="qa">
+        <h2>Q3: Can I book a test drive directly from the website?</h2>
+        <p>A: Yes! Simply go to the car’s detail page and click the “Book Test Drive” button. Fill in your contact details, and the nearest dealer will reach out to confirm your appointment.</p>
+      </div>
+
+      <div class="qa">
+        <h2>Q4: Are all car listings verified?</h2>
+        <p>A: Yes, every listing is manually verified for authenticity, including vehicle documents, dealer details, and registration information.</p>
+      </div>
+
+      <div class="qa">
+        <h2>Q5: Is this website mobile-friendly?</h2>
+        <p>A: Absolutely! Our design is fully responsive, so you can browse, compare, and book test drives smoothly from any device.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feedback-overlay" id="feedbackOverlay">
+    <div class="feedback-card">
+      <button class="close-feedback" id="closeFeedback">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h1><i class="fa-solid fa-comment-dots"></i> Feedback</h1>
+      <p>We value your opinion! Please share your feedback below.</p>
+
+      <form id="feedbackForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your feedback..." required></textarea>
+
+        <label class="rating-label">Rate your experience</label>
+        <div class="stars">
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <button type="submit" class="submit-feedback">
+          <i class="fa-solid fa-paper-plane"></i> Submit Feedback
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="help-overlay" id="documentationOverlay">
+    <div class="help-card">
+        <button class="close-help" id="closeDoc"><i class="fa-solid fa-xmark"></i></button>
+        <h1><i class="fa-solid fa-car-side"></i> Featured Motor Vehicles (10 Listings)</h1>
+
+        <div class="qa vehicle-card">
+            <h2>1. Alpha Motors Legacy (Luxury Sedan)</h2>
+            
+            <p><strong>Model Year:</strong> 2024 | <strong>Engine:</strong> 2.0L Hybrid | <strong>Mileage:</strong> 22 kmpl</p>
+            <p>A premium executive sedan featuring adaptive cruise control, ventilated leather seats, and a 5-star safety rating. Perfect for city and long-distance comfort.</p>
+            <p><strong>Price:</strong> ₹ 45,00,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+
+        <div class="qa vehicle-card">
+            <h2>2. Kratos X-Track (Supersport Bike)</h2>
+            
+            <p><strong>Model Year:</strong> 2023 | <strong>Engine:</strong> 600cc Inline-Four | <strong>Power:</strong> 120 HP</p>
+            <p>Designed for the track, this bike offers explosive acceleration, Brembo braking system, and fully adjustable suspension for precision handling.</p>
+            <p><strong>Price:</strong> ₹ 8,50,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+        
+        <div class="qa vehicle-card">
+            <h2>3. Volt City Rider (Electric Scooter)</h2>
+            
+            <p><strong>Model Year:</strong> 2024 | <strong>Range:</strong> 150 km | <strong>Charging Time:</strong> 4 Hours (Fast Charge)</p>
+            <p>Zero-emission commuting solution. Features include smart navigation, regenerative braking, and a spacious under-seat storage compartment.</p>
+            <p><strong>Price:</strong> ₹ 1,15,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+        
+        <div class="qa vehicle-card">
+            <h2>4. Terra Voyager (Off-Road SUV)</h2>
+            
+            <p><strong>Model Year:</strong> 2024 | <strong>Engine:</strong> 2.8L Diesel Turbo | <strong>Drivetrain:</strong> Full-time 4x4</p>
+            <p>Built for adventure. High ground clearance, electronic locking differentials, and seating for seven. Ready for any terrain.</p>
+            <p><strong>Price:</strong> ₹ 35,50,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+        
+        <div class="qa vehicle-card">
+            <h2>5. V-Twin Drifter (Classic Cruiser)</h2>
+            
+            <p><strong>Model Year:</strong> 2023 | <strong>Engine:</strong> 1000cc V-Twin | <strong>Features:</strong> Forward Controls, Wide Handlebars</p>
+            <p>The ultimate highway cruiser. Low-slung profile, immense torque, and comfortable touring seat designed for endless open road trips.</p>
+            <p><strong>Price:</strong> ₹ 4,20,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+        
+        <div class="qa vehicle-card">
+            <h2>6. Astro Compact (City Hatchback)</h2>
+            
+            <p><strong>Model Year:</strong> 2024 | <strong>Engine:</strong> 1.2L Petrol | <strong>Transmission:</strong> AMT/Manual</p>
+            <p>Economical and nimble, perfect for urban environments. Boasts a surprisingly large boot space and best-in-class mileage figures.</p>
+            <p><strong>Price:</strong> ₹ 7,80,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+        
+        <div class="qa vehicle-card">
+            <h2>7. Apex Explorer (Adventure Touring Bike)</h2>
+            
+            <p><strong>Model Year:</strong> 2024 | <strong>Engine:</strong> 800cc Twin | <strong>Suspension:</strong> Long-travel adjustable</p>
+            <p>True dual-sport capability. Equipped with engine guards, large fuel tank, switchable ABS, and dedicated off-road riding modes.</p>
+            <p><strong>Price:</strong> ₹ 9,90,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+        
+        <div class="qa vehicle-card">
+            <h2>8. Rhino Hauler (Heavy-Duty Pickup)</h2>
+            
+            <p><strong>Model Year:</strong> 2023 | <strong>Engine:</strong> 3.0L V6 Turbo Diesel | <strong>Towing Capacity:</strong> 3500 kg</p>
+            <p>Unmatched utility for work and play. Features a reinforced chassis, spacious double cab, and trailer sway control system.</p>
+            <p><strong>Price:</strong> ₹ 42,00,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+
+        <div class="qa vehicle-card">
+            <h2>9. Orbit Traveler (Luxury Mini-Van)</h2>
+            
+            <p><strong>Model Year:</strong> 2024 | <strong>Seating:</strong> 7 Captain Seats | <strong>Features:</strong> Rear Entertainment System</p>
+            <p>The ultimate family vehicle. Provides smooth ride comfort, electronic sliding doors, and modular second and third-row seating arrangements.</p>
+            <p><strong>Price:</strong> ₹ 21,50,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+
+        <div class="qa vehicle-card">
+            <h2>10. Specter R-500 (Performance Coupe)</h2>
+            
+            <p><strong>Model Year:</strong> 2024 | <strong>Engine:</strong> 5.0L V8 Supercharged | <strong>0-100 km/h:</strong> 3.8 Seconds</p>
+            <p>Raw power meets precision engineering. Carbon fiber accents, massive ceramic brakes, and track-optimized driving dynamics for adrenaline seekers.</p>
+            <p><strong>Price:</strong> ₹ 1,25,00,000 Onwards</p>
+            <div class="vehicle-actions">
+                <button class="action-btn test-drive-btn"><i class="fa-solid fa-steering-wheel"></i> Book a Test Drive</button>
+                <button class="action-btn details-btn"><i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+  <script src="Main.js"></script>
+</body>
+</html>
